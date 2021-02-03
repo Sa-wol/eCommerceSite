@@ -16,6 +16,6 @@
 
 #### Task List:
 - [x] Add more information to READ.md
-- [ ]  Add styling with Bootstrap
+- [x]  Add styling with Bootstrap
 - [ ] Working Edit button
 - [ ] Working Delete button
