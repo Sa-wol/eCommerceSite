@@ -9,8 +9,6 @@
     @TempData["Message"]
 </p>
 
-<a asp-action="Add" asp-controller="Product">Add Product</a>
-
 @if(TempData["Message"] != null)
 {
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -43,7 +41,7 @@
                     <td>@Html.DisplayFor(m => p.Price)</td>
                     <td>@p.Category</td>
                     <td>
-                        <a class="btn btn-secondary"href="">Edit</a>
+                        <a class="btn btn-secondary" asp-route-id="@p.ProductId" asp-action="Edit">Edit</a>
                         <a class="btn btn-danger" href="">Delete</a>
                     </td>
                 </tr>
