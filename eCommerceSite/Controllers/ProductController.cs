@@ -40,15 +40,17 @@ namespace eCommerceSite.Controllers
         }
 
         [HttpPost]
+
         public async Task<IActionResult> Add(Product p) 
         {
             if (ModelState.IsValid)
             {
                 // Add to DB
                 _context.Products.Add(p);
+
                 await _context.SaveChangesAsync();
 
-                TempData["Message"] = $"{p.ProductId}:{p.Title} was added successfully";
+                TempData["Message"] = $"{p.Title} was added successfully";
 
                 // redirect back to catalog page
                 return RedirectToAction("Index");
