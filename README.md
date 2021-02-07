@@ -18,4 +18,4 @@
 - [x] Add more information to READ.md
 - [x]  Add styling with Bootstrap
 - [x] Working Edit button
-- [ ] Working Delete button
+- [x] Working Delete button
