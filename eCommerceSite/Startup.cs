@@ -58,6 +58,7 @@ namespace eCommerceSite
 
             app.UseAuthorization();
 
+            // Must be between UseRouting() and UseEendpoints()
             app.UseSession();
 
             app.UseEndpoints(endpoints =>
