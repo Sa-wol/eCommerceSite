@@ -48,14 +48,13 @@ namespace eCommerceSite.Models
                 IsEssential = true
             };
 
-            http.HttpContext.Response.Cookies.Append(CartCookie, data, options);
-
-            
+            http.HttpContext.Response.Cookies.Append(CartCookie, data, options); 
         }
 
         public static int GetTotalCartProducts(IHttpContextAccessor http)
         {
-            throw new NotImplementedException();
+            List<Product> cartProducts = GetCartProducts(http);
+            return cartProducts.Count;
         }
     }
 }
